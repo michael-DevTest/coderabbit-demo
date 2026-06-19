@@ -40,3 +40,9 @@ const sampleOrder = {
 };
 
 console.log(processOrder(sampleOrder));
+
+function calculateTax(total, taxRate) {
+  return total * taxrate;
+}
+
+console.log("Tax:", calculateTax(150, 0.07));

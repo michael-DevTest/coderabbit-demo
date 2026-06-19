@@ -10,10 +10,6 @@ function calculateDiscount(price, customerType) {
   return price;
 }
 
-function getUserDisplayName(user) {
-  return user.profile.firstName + " " + user.profile.lastName;
-}
-
 function processOrder(order) {
   let total = order.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -22,8 +18,8 @@ function processOrder(order) {
   const finalPrice = calculateDiscount(total, order.customer.type);
 
   return {
-    total: total,
-    finalPrice: finalPrice,
+    total,
+    finalPrice,
     timestamp: new Date().toISOString()
   };
 }

@@ -28,6 +28,11 @@ function processOrder(order) {
   };
 }
 
+function calculateTax(total, taxRate) {
+  return total * taxrate;
+}
+console.log("Tax:", calculateTax(150, 0.07));
+
 const sampleOrder = {
   customer: {
     email: "demo@example.com",
